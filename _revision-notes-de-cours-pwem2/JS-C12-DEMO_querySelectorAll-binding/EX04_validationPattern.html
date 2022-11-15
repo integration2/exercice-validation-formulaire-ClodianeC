@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX04 - Validation avec l'attribut HTML pattern</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <h1>EX04 - Validation avec l'attribut HTML pattern</h1>
+    </header>
+    <main>
+        <form action="#">
+            <div class="ctnValidation">
+                <label for="prenom">Prénom</label>
+                <input id="prenom" type="text" required pattern="[A-ZÇÀ-Ÿ][a-zA-ZÀ-ÿ '\-]{1,29}">
+            </div>
+            <button type="submit">Valider</button>
+        </form>
+        <p>Validation sur l'événement <code>blur</code>.</p>
+        <p>Ouvrir la console de débogage avec F12 pour voir les <code>console.log()</code></p>
+    </main>
+    <footer>
+        <a href="./EX01_querySelectorAll.html">EX01</a>
+        <a href="./EX02_parentNode.html">EX02</a>
+        <a href="./EX03_closest.html">EX03</a>
+        <a href="./EX04_validationPattern.html">EX04</a>
+    </footer>
+    <script src="scripts/EX04_validationPattern.js"></script>
+</body>
+</html>

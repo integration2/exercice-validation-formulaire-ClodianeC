@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+/**
+ * @author Prénom Nom courriel
+ *
+ * TABLE DES MATIERES
+ * Normalize
+ * Utilitaires
+ * Charte typographique
+ * Grille
+ * Mise en page
+ *** entête
+ *** main
+ *** formulaire
+ *** interactivité
+ *** footer
+ */
+
+
+/* Normalize
+   ========================================================================== */
+@import url(_normalize.css);
+
+/* Utilitaires
+   ========================================================================== */
+@import url(_utilitaires.css);
+
+/* Charte typographique
+   ========================================================================== */
+@import url(_typo.css);
+
+/* Grille
+   ========================================================================== */
+@import url(_grille.css);
+
+/* Mise en page
+   ========================================================================== */
+.boite{
+    background-color:rgba(255, 255, 255, 0.6);
+    padding: var(--padding-text);
+    border-radius:1rem;
+}
+body{
+    background-color:var(--couleur-secondaire);
+    background-image: linear-gradient(var(--couleur-principale) 10%, var(--couleur-secondaire) 15%, var(--couleur-tertiaire));
+}
+main{
+    background-color: white;
+    padding-top:2rem;
+}
+body>.conteneur{
+    box-shadow: 5px 10px 18px #888;
+}
+/*** entête ***/
+header{
+    background-color: var(--couleur-principale);
+}
+/*** main ***/
+.titre{
+    width:100%;
+    padding: var(--padding-text);
+    margin-bottom: 0;
+}
+aside>p:first-of-type{
+    margin-top: 0;
+}
+@media(max-width: 599px){
+    form{
+        margin-top:2rem;
+    }
+}
+/*** formulaire ***/
+form{
+    position: relative;
+    top:-3rem;
+}
+fieldset{
+    border:none;
+    background-color: #ececec;
+    padding-top:3rem;
+    border-radius:1rem;
+}
+fieldset h2{
+    position:relative;
+    top:2.25rem;
+}
+fieldset fieldset{
+    border:2px groove #000;
+    padding:0.35em 0.75em 0.625em;
+}
+fieldset+fieldset{
+    margin-top:2rem;
+}
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=number],
+select{
+    width:100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+legend{
+    padding:0 0.5rem;
+    font-family: NewsCycle-bold;
+}
+.telephone .rangee{
+    align-items: flex-end;
+}
+.telephone .rangee p:nth-of-type(2){
+    text-align: center;
+}
+.tiret{
+    font-family: NewsCycle-bold;
+    padding: 0.5rem;
+}
+input[type=checkbox]{
+    margin-right:1rem;
+}
+.reglement,
+.documentation,
+.soumission{
+    padding-left: 2rem;
+}
+
+/*** interactivité ***/
+:focus{
+    outline: #276062 auto 5px;
+}
+.ctnValidation p{
+    margin:0.5rem 0;
+}
+.ctnValidation{
+    margin:1.5rem 0;
+}
+button{
+    font-family: NewsCycle-bold;
+    padding:1rem;
+    border:0.5px solid gray;
+    background-color: var(--couleur-secondaire);
+    border-radius: 1rem;
+    transition: all 0.5s;
+}
+button:hover{
+    /*background-color: var(--couleur-tertiaire);*/
+    transform:scale(1.15);
+    cursor: pointer;
+}
+[type=radio]+label{
+    border:1px solid transparent;
+    display: inline-block;
+    padding: 0.25rem;
+}
+[type=radio]+label img{
+    filter: grayscale(1);
+}
+[type=radio]:hover+label img,
+[type=radio]:focus+label img{
+    filter: grayscale(0);
+}
+[type=radio]:checked+label img{
+    filter: grayscale(0);
+}
+[type=radio]:checked+label{
+    border:1px solid black;
+}
+/*** footer ***/
+footer{
+    padding:5rem;
+}
+.credits{
+    text-align: center;
+}

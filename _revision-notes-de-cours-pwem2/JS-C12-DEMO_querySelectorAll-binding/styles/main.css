@@ -1,0 +1,106 @@
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+header {
+    flex-shrink: 0;
+    font-size: 1.2rem;
+    padding: 16px;
+    background: rgb(245, 245, 245);
+}
+
+header > h1{
+    font-size: inherit;
+}
+
+
+header > :first-child {
+    margin: 0;
+}
+
+main {
+    flex: auto;
+    padding: 32px 16px;
+}
+
+main > :first-child {
+    margin-top: 0;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 24px 16px;
+    border-top: 1px solid rgb(227, 227, 227);
+}
+
+form {
+    max-width: 400px;
+    font-family: sans-serif;
+}
+
+label {
+    display: block;
+    cursor: pointer;
+}
+
+#messageErreur {
+    color: red;
+}
+
+fieldset ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+select {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 8px;
+}
+
+button {
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+    min-height: 32px;
+    padding: 0 10px;
+}
+
+code {
+    display: inline-block;
+    background: rgb(245, 245, 245);
+    padding: 2px 4px;
+}
+
+.ctnValidation.erreur input {
+    border-color: red;
+}
+
+.ctnValidation label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+button {
+    margin-top: 16px;
+}
+
