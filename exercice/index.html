@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice Validation formulaire</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header class="header">
+        <img src="../images/entete.jpg">
+    </header>
+    <main class="main">
+        <h1>Créer un compte</h1>
+        <p class="question">Déjà un compte?</p>
+        <a href="#" class="lien">Se connecter</a>
+        <form>
+            <fieldset class="fieldset">
+                <legend class="legend">Nom complet</legend>
+                <label class="label" for="prenom">Prénom</label>
+                <input class="input" id="prenom" name="prenom" type="text" required pattern="[A-ZÇÀ-Ÿ][a-zA-ZÀ-ÿ '\-]{1,29}">
+                <label class="label" for="nom">Nom</label>
+                <input class="input" id="nom" name="nom" type="text" required pattern="[A-ZÇÀ-Ÿ][a-zA-ZÀ-ÿ '\-]{1,29}">
+                <p class="erreur" aria-live="polite"></p>
+            </fieldset>
+            <label class="label" for="courriel">Courriel</label>
+            <input class="input" id="courriel" name="courriel" type="text" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            <p class="erreur" aria-live="polite"></p>
+            <label class="label" for="motDePasse">Mot de passe</label>
+            <input class="input" id="motDePasse" name="motDePasse" type="password" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,256}$">
+            <p class="erreur" aria-live="polite"></p>
+            <label class="checkLabel" for="showPassConfirm">Montrer le mot de passe</label>
+            <input class="checkbox" id="showPass" name="showPass" type="checkbox">
+            <p>Le mot de passe doit inclure:</p>
+            <ul class="liste-criteres">
+                <!-- inactif lorsqu'en dehors du fieldset -->
+                <!-- probleme lorsque dans le fieldset mais correspond pas au critere -->
+                <!-- bien lorsque remplit le critere -->
+                <li class="criteres inactif" id="maj">1 lettre majuscule</li>
+                <li class="criteres inactif" id="min">1 lettre minuscule</li>
+                <li class="criteres inactif" id="no">1 nombre</li>
+                <li class="criteres inactif" id="huit">8+ caractères</li>
+                <li class="criteres inactif" id="special">1 caractère spécial</li>
+                <li class="criteres inactif" id="max">256 caractères max ou moins</li>
+            </ul>
+            <label class="label" for="confirmMotDePasse">Confirmer le mot de passe</label>
+            <input class="input" id="confirmMotDePasse" name="confirmMotDePasse" type="password" required>
+            <p class="erreur" aria-live="polite"></p>
+            <label class="checkLabel" for="showPassConfirm">Montrer le mot de passe</label>
+            <input class="checkbox" id="showPassConfirm" name="showPassConfirm" type="checkbox">
+            <button type="submit" class="button">Créer un compte</button>
+        </form>
+    </main>
+    <footer class="footer">
+        <p class="credits">
+            <strong><small>©2022, Clodiane Charette.</small></strong><br>
+            <small>Réalisé dans le cadre du cours RPNI, Programme TIM, Cégep de
+                Sainte-Foy.
+            </small>
+        </p>
+    </footer>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
