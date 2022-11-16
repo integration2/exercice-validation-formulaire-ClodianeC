@@ -30,13 +30,10 @@
 
 /* Styles errorWarningGood
    ========================================================================== */
-.inactif{
-    color: black;
-}
 .bien{
     color: green;
 }
-.probleme{
+.erreur{
     color: red;
 }
 

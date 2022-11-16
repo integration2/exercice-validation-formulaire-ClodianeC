@@ -7,49 +7,16 @@ const objJSONMessagesErreur = {
         "vide": "Le champ nom est requis.",
         "motif": "Le champ nom comporte un ou plusieurs caractères interdits."
     },
-    "adresse": {
-        "vide": "Le champ adresse est requis.",
-        "motif": "Le champ adresse comporte un ou plusieurs caractères interdits."
-    },
-    "ville":{
-        "vide": "Le champ ville est requis.",
-        "motif": "Les lettres, les accents français, les espaces, les tirets et les apostrophes sont permis."
-    },
-    "pays":{
-        "vide": "Le champ pays est requis.",
-        "motif": "Les lettres, les accents français, les espaces, les tirets et les apostrophes sont permis."
-    },
-    "codepostal":{
-        "vide": "Le champ code postal est requis.",
-        "motif": "Format du code postal est invalide. Respectez le format suivant: X1X 1X1."
-    },
     "courriel":{
         "vide": "Le champ courriel est requis.",
         "motif": "Format du courriel est invalide."
     },
-    "indicatif":{
-        "vide": "Le champ indicatif régional est requis",
-        "motif": "Le champ indicatif régional est invalide."
+    "motDePasse":{
+        "vide": "Le champ mot de passe est requis.",
+        "motif": "Format du mot de passe est invalide."
     },
-    "numero":{
-        "vide": "Le champ numéro de téléphone est requis.",
-        "motif": "Le format du numéro de téléphone est invalide. Entrer seulement sept chiffres."
+    "confirmMotDePasse":{
+        "vide": "Le champ de la confirmation du mot de passe est requis.",
+        "pareil": "La confirmation du mot de passe ne concorde pas avec le mot de passe original."
     },
-    "jour":{
-        "vide": "Le champ jour est requis.",
-        "motif": "Le jour est invalide. Entrez un nombre entre 1 et 31."
-    },
-    "mois":{
-        "vide": 'Le champ mois est requis.'
-    },
-    "annee":{
-        "vide": "Le champ année est requis.",
-        "motif": "L'année est invalide. Entrez une année avant 2022."
-    },
-    "reponseParticipant":{
-        "vide": "Une répondre à la question est requise."
-    },
-    "reglement":{
-        "vide": "Veuillez lire et accepter les conditions du concours."
-    }
 };
